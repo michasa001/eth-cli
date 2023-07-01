@@ -1,6 +1,6 @@
 {
   "name": "ether-cli",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "Yande & Michael Osa",
   "main": "index.js",
   "license": "MIT",
