@@ -5,7 +5,6 @@ import * as fs from "fs";
 
 import yargs from "yargs";
 
-const { argv } = yargs(process.argv)
 let write = process.argv[3];
 
 const generateAccount = async () => {
