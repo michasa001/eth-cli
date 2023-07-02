@@ -17,11 +17,12 @@ const write = process.argv[4];
 const getTransactions = async () => {
 
   const provider = new ethers.AlchemyProvider(network, providerApiKey)
+  const mainnetProvider = new ethers.AlchemyProvider("mainnet", providerApiKey)
   const etherscanApiKey = config.etherscan[network].etherscanApiKey
   const etherscanUrl = config.etherscan[network].url
 
   if (address.includes(".eth")) {
-    address = await provider.resolveName(address)
+    address = await mainnetProvider.resolveName(address)
   }
 
   if (!config.networks.includes(network)) {
