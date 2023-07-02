@@ -30,8 +30,8 @@ function printHelp() {
   console.log("- ens");
   console.log("- resolvename");
   console.log("- transfer");
-  console.log("- gettransaction");
-  console.log("- gettransactions");
+  console.log("- transaction");
+  console.log("- transactions");
   console.log("- generate");
   console.log("- events");
   console.log("- watchtransactions");
@@ -59,10 +59,10 @@ async function executeCommand(command) {try {
     case "transfer":
       await transfer();
       break;
-    case "gettransaction":
+    case "transaction":
       await getTransaction();
       break;
-    case "gettransactions":
+    case "transactions":
       await getTransactions();
       break;
     case "generate":
