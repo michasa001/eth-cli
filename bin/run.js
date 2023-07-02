@@ -18,53 +18,80 @@ import contract from '../commands/contract.js';
 
 const command = process.argv[2];
 
-switch (command) {
-  case 'balance':
-    getBalance();
-    break;
-  case 'ens':
-    getEns();
-    break;
-  case 'resolvename':
-    resolveEns()
-    break;
-  case "transfer":
-    transfer()
-    break;
-  case "gettransaction":
-    getTransaction()
-    break;
-  case "gettransactions":
-    getTransactions()
-    break;
-  case "generate":
-    generateAccount()
-    break;
-  case "events":
-    getEvents()
-    break;
-  case "watchtransactions":
-    watchPendingTransactions()
-    break;
-  case "addabi":
-    addAbi()
-    break;
-  case "removeabi":
-    removeAbi()
-    break;
-  case "getabi":
-    getAbi()
-    break;
-  case "updateabi":
-    updateAbi()
-    break;
-  case "abis":
-    abis()
-    break;
-  case "contract":
-    contract()
-    break;
-  default:
-    console.error(`Unknown command: ${command}`);
-    process.exit(1);
+if (command === '-help') {
+  printHelp();
+} else {
+  executeCommand(command);
+}
+
+function printHelp() {
+  console.log('Available commands:');
+  console.log('- balance');
+  console.log('- ens');
+  console.log('- resolvename');
+  console.log('- transfer');
+  console.log('- gettransaction');
+  console.log('- gettransactions');
+  console.log('- generate');
+  console.log('- events');
+  console.log('- watchtransactions');
+  console.log('- addabi');
+  console.log('- removeabi');
+  console.log('- getabi');
+  console.log('- updateabi');
+  console.log('- abis');
+  console.log('- contract');
+}
+
+function executeCommand(command) {
+  switch (command) {
+    case 'balance':
+      getBalance();
+      break;
+    case 'ens':
+      getEns();
+      break;
+    case 'resolvename':
+      resolveEns();
+      break;
+    case 'transfer':
+      transfer();
+      break;
+    case 'gettransaction':
+      getTransaction();
+      break;
+    case 'gettransactions':
+      getTransactions();
+      break;
+    case 'generate':
+      generateAccount();
+      break;
+    case 'events':
+      getEvents();
+      break;
+    case 'watchtransactions':
+      watchPendingTransactions();
+      break;
+    case 'addabi':
+      addAbi();
+      break;
+    case 'removeabi':
+      removeAbi();
+      break;
+    case 'getabi':
+      getAbi();
+      break;
+    case 'updateabi':
+      updateAbi();
+      break;
+    case 'abis':
+      abis();
+      break;
+    case 'contract':
+      contract();
+      break;
+    default:
+      console.error(`Unknown command: ${command}`);
+      process.exit(1);
+  }
 }
