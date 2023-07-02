@@ -27,7 +27,7 @@ const getEns = async () => {
   const ens = await provider.lookupAddress(address)
 
   if (ens == null) {
-    console.log(chalk.red(`ens not registered`))
+    console.log(chalk.red(`address not registered`))
     return
   }
   console.log(chalk.green(`${ens}`))
