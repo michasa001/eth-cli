@@ -17,13 +17,17 @@ const resolveEns = async () => {
   if (!config.networks.includes(network)) {
     network = "mainnet"
   }
-  
+
   if (!ens.includes(".eth")) {
     console.error(chalk.red(`Invalid Ens Name`))
     return
   }
 
   const address = await provider.resolveName(ens)
+  if (address == null) {
+    console.log(chalk.red(`ens not registered`))
+    return
+  }
   console.log(chalk.green(`${address}`))
 
 }

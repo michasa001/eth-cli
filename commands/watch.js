@@ -44,6 +44,11 @@ const watchTransactions = () => {
 const watchPendingTransactions = async () => {
   if (address && address.includes(".eth")) {
     address = await provider.resolveName(address)
+
+    if (address == null) {
+      console.log(chalk.red(`ens not registered`))
+      return
+    }
   }
 
   if (address && !ethers.isAddress(address)) {

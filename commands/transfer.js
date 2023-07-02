@@ -19,6 +19,10 @@ const transfer = async () => {
 
   if (address.includes(".eth")) {
     address = await mainnetProvider.resolveName(address)
+    if (address == null) {
+      console.log(chalk.red(`ens not registered`))
+      return
+    }
   }
 
   if (!config.networks.includes(network)) {

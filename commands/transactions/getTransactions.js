@@ -23,13 +23,17 @@ const getTransactions = async () => {
 
   if (address.includes(".eth")) {
     address = await mainnetProvider.resolveName(address)
+    if (address == null) {
+      console.log(chalk.red(`ens not registered`))
+      return
+    }
   }
 
   if (!config.networks.includes(network)) {
     console.error(chalk.red(`Network not supported`))
     return
   }
-
+ 
   if (!ethers.isAddress(address)) {
     console.error(chalk.red(`Invalid Address`))
     return

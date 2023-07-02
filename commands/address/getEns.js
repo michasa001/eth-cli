@@ -14,7 +14,7 @@ const getEns = async () => {
 
   const provider = new ethers.AlchemyProvider(network, providerApiKey)
 
-  
+
   if (!config.networks.includes(network)) {
     network = "mainnet"
   }
@@ -25,6 +25,11 @@ const getEns = async () => {
   }
 
   const ens = await provider.lookupAddress(address)
+
+  if (ens == null) {
+    console.log(chalk.red(`ens not registered`))
+    return
+  }
   console.log(chalk.green(`${ens}`))
 }
 
