@@ -14,6 +14,11 @@ const getBalance = async () => {
 
   const provider = new ethers.AlchemyProvider(network, providerApiKey)
 
+  if (!address) {
+    console.error(chalk.red("Please enter address"))
+    return
+  }
+
   if (address.includes(".eth")) {
     address = await provider.resolveName(address)
   }

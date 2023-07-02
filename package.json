@@ -1,15 +1,15 @@
 {
   "name": "ether-cli",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "author": "Yande & Michael Osa",
-  "main": "./bin/run",
+  "main": "./bin/run.js",
   "license": "MIT",
   "description": "This is a tool for querying the blockchain and sending transcations rigth in your command line",
   "type": "module",
   "homepage": "https://github.com/michasa001/eth-cli",
   "repository": "michasa001/eth-cli",
   "bin": {
-    "eth": "./bin/run"
+    "eth": "./bin/run.js"
   },
   "dependencies": {
     "axios": "^1.4.0",
@@ -22,6 +22,6 @@
     "yargs": "^17.7.2"
   },
   "scripts": {
-    "eth": "./bin/run"
+    "eth": "./bin/run.js"
   }
 }
