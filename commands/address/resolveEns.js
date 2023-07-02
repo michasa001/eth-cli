@@ -19,7 +19,7 @@ const resolveEns = async () => {
   }
 
   if (!ens.includes(".eth")) {
-    console.error(chalk.red(`Invalid Ens Name`))
+    console.error(chalk.red(`Invalid ENS Name`))
     return
   }
 
@@ -28,7 +28,7 @@ const resolveEns = async () => {
     console.log(chalk.red(`ens not registered`))
     return
   }
-  console.log(chalk.green(`${address}`))
+  console.log(chalk.green(`Address: ${address}`))
 
 }
 
