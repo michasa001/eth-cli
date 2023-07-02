@@ -18,7 +18,7 @@ import contract from "../commands/contract.js";
 
 const command = process.argv[2];
 
-if (command == "-help" || "--help" || "help") {
+if (command == "-help" || command == "--help" || command == "help") {
   printHelp();
 } else {
   executeCommand(command);
@@ -29,7 +29,9 @@ function printHelp() {
   console.log("- eth balance <ADDRESS || ENS>");
   console.log("- ens <ADDRESS>");
   console.log("- resolvename <ENS>");
-  console.log("- transfer <ADDRESS> <AMOUNT> --privatekey=<PRIVATEKEY> --network=<NETWORK>");
+  console.log(
+    "- transfer <ADDRESS> <AMOUNT> --privatekey=<PRIVATEKEY> --network=<NETWORK>"
+  );
   console.log("- transaction <HASH>");
   console.log("- transactions <ADDRESS>");
   console.log("- generate");
@@ -40,9 +42,10 @@ function printHelp() {
   console.log("- getabi <NAME>");
   console.log("- updateabi <NAME>");
   console.log("- abis");
-  console.log("- contract <ADDRESS> --abi=<abiName> --privatekey=<PRIVATEKEY> --network=<NETWORK>");
+  console.log(
+    "- contract <ADDRESS> --abi=<abiName> --privatekey=<PRIVATEKEY> --network=<NETWORK>"
+  );
   process.exit(0);
-
 }
 
 async function executeCommand(command) {
@@ -104,4 +107,3 @@ async function executeCommand(command) {
 
   process.exit(0);
 }
-
