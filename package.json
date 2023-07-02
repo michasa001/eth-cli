@@ -1,13 +1,13 @@
 {
   "name": "ether-cli",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "author": "myande & Michael Osa",
   "main": "./bin/run.js",
   "license": "MIT",
   "description": "ether-cli is a tool for querying the blockchain data and sending transcations right from your command line ",
   "type": "module",
-  "homepage": "https://github.com/michasa001/eth-cli",
-  "repository": "michasa001/eth-cli",
+  "homepage": "https://github.com/michasa001/ether-cli",
+  "repository": "michasa001/ether-cli",
   "bin": {
     "eth": "./bin/run.js"
   },
