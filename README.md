@@ -44,7 +44,7 @@ eth COMMAND
 ```
 
 3. Use the eth --help command to view the available commands and their usage:
-4. 
+
 ```
  eth --help 
 ```
