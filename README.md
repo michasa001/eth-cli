@@ -23,6 +23,7 @@
   - [`eth updateab1 <NAME> <PATH>`](#eth-updateabi-name-path)
   - [`eth watchtransactions <ADDRESS>`](#eth-watchtransactions-address)
 - [Networks](#networks)
+- [Contributing to ether cli](#contributing-to-ether-cli)
 
 
 # Description
@@ -383,3 +384,7 @@ EXAMPLES
 - optimismGoerli
 - polygon
 - polygonMumbai
+
+# Contributing to ether-cli
+
+We welcome contributions to ether-cli!
