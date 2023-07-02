@@ -18,7 +18,7 @@ import contract from "../commands/contract.js";
 
 const command = process.argv[2];
 
-if (command === "-help") {
+if (command === "--help") {
   printHelp();
 } else {
   executeCommand(command);
