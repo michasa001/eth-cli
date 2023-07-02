@@ -1,6 +1,8 @@
 import Conf from "conf";
 import chalk from "chalk";
 
+//**Description: Removes an ABI from storage. */
+
 const store = new Conf({ projectName: 'eth-cli' });
 
 const name = process.argv[3];

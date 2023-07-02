@@ -1,8 +1,9 @@
 import chalk from "chalk";
 import { ethers } from "ethers";
 import config from "../../cli-config.js";
-
 import yargs from "yargs";
+
+//**Description: Gets the transaction log of a transaction hash. */
 
 const { argv } = yargs(process.argv)
 let hash = process.argv[3];

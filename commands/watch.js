@@ -2,6 +2,8 @@ import Web3 from "Web3";
 import config from "../cli-config.js";
 import { ethers } from "ethers"
 
+//**Description:   Watch all pending transactions on eth mainnet or transactions specific to an address. */
+
 const providerApiKey = config.providerApiKey
 
 let web3 = new Web3(new Web3.providers.HttpProvider(`https://eth-mainnet.g.alchemy.com/v2/${providerApiKey}`));

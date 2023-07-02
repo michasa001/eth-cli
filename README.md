@@ -71,7 +71,7 @@ eth COMMAND
 
 ## `eth abis`
 
-gets all abi names in storage
+Retrieves all ABI names in storage.
 
 ```
 USAGE
@@ -87,9 +87,9 @@ EXAMPLES
   $ eth abis
 ```
 
-## `eth addabi NAME PATH`
+## `eth addabi <NAME> <PATH>`
 
-adds an abi json file to storage
+Adds an ABI JSON file to storage.
 
 ```
 USAGE
@@ -108,7 +108,7 @@ EXAMPLES
 
 ## `eth balance <ADDRESS || ENS> --network=<NETWORK>`
 
-gets the eth balance of an address
+Gets the eth balance of an address
 
 ```
 USAGE
@@ -120,7 +120,7 @@ ARGUMENTS
   NETWORK - Network name
 
 DESCRIPTION
-  gets the eth balance of an address
+  Gets the eth balance of an address
 
 EXAMPLES
   $ eth balance michael001.eth
@@ -129,7 +129,7 @@ EXAMPLES
 
 ## `eth contract <ADDRESS> --abi=<abiName> --privatekey=<PRIVATEKEY> --network=<NETWORK>`
 
-gets a contract instance and opens an environment to interact with the contract
+Generates a contract instance and opens an environment to interact with the contract.
 
 ```
 USAGE
@@ -141,7 +141,7 @@ ARGUMENTS
   NETWORK - Network name
 
 DESCRIPTION
-  Gets a contract instance and opens an environment to interact with the contract.
+  Generates a contract instance and opens an environment to interact with the contract.
 
 EXAMPLES
   $ eth contract 0x0000000000000000000000000000000000001111 --abi=erc20abi --privatekey=0x00000000000000000000000000000000000000000000001111 --network=sepolia
@@ -151,7 +151,7 @@ EXAMPLES
 
 ## `eth ens <ADDRESS>`
 
-gets the ens name of a wallet address
+Gets the ens name of a wallet address.
 
 ```
 USAGE
@@ -161,7 +161,7 @@ ARGUMENTS
   ADDRESS - wallet address
   
 DESCRIPTION
-  gets the ens name of a wallet address
+  Gets the ens name of a wallet address.
 
 EXAMPLES
   $ eth ens 0x0000000000000000000000000000000000001111
@@ -169,7 +169,7 @@ EXAMPLES
 
 ## `eth events <ADDRESS>`
 
-gets the log of past events of a contract address
+Gets the log of past events of a contract address.
 
 ```
 USAGE
@@ -179,7 +179,7 @@ ARGUMENTS
   ADDRESS - contract address
   
 DESCRIPTION
-  gets the log of past events of a contract address
+  Gets the log of past events of a contract address.
 
 EXAMPLES
   $ eth events 0x0000000000000000000000000000000000001111
@@ -190,7 +190,7 @@ EXAMPLES
 
 ## `eth generate`
 
-generates a random wallet address with its privatekey and mnemonic phrase
+Generates a random wallet address with its privatekey and mnemonic phrase.
 
 ```
 USAGE
@@ -201,16 +201,16 @@ ARGUMENTS
   none
   
 DESCRIPTION
-  gets the log of past events of a contract address
+  Generates a random wallet address with its privatekey and mnemonic phrase.
 
 EXAMPLES
   $ eth generate --export
 
 ```
 
-## `eth getabi NAME`
+## `eth getabi <NAME>`
 
-gets an abi from storage
+Gets an ABI from storage.
 
 ```
 USAGE
@@ -220,16 +220,16 @@ ARGUMENTS
   NAME - name of the abi in storage
   
 DESCRIPTION
-  gets an abi from storage
+  Gets an ABI from storage.
 
 EXAMPLES
   $ eth getabi erc20abi
 
 ```
 
-## `eth removeabi NAME`
+## `eth removeabi <NAME>`
 
-removes an abi from storage
+Removes an ABI from storage.
 
 ```
 USAGE
@@ -239,16 +239,16 @@ ARGUMENTS
   NAME - abi name
   
 DESCRIPTION
-  removes an abi from storage
+  Removes an ABI from storage.
 
 EXAMPLES
   $ eth removeabi erc20abi
 
 ```
 
-## `eth resolvename NAME`
+## `eth resolvename <NAME>`
 
-resolves an ens name and gives the address
+Resolves an ENS name and gives the address.
 
 ```
 USAGE
@@ -258,16 +258,16 @@ ARGUMENTS
   NAME - ens name
   
 DESCRIPTION
-  resolves an ens name and gives the address
+  Resolves an ENS name and gives the address.
 
 EXAMPLES
   $ eth resolvename michael001.eth
 
 ```
 
-## `eth transaction HASH --network=<NETWORK>`
+## `eth transaction <HASH> --network=<NETWORK>`
 
-gets the transaction log of a transaction hash
+Gets the transaction log of a transaction hash.
 
 ```
 USAGE
@@ -279,7 +279,7 @@ ARGUMENTS
   NETWORK - network name
   
 DESCRIPTION
-  gets the transaction log of a transaction hash
+  Gets the transaction log of a transaction hash.
 
 EXAMPLES
   $ eth transaction 0xc4fd8a76acef6abf75f3272fc3a08a480504d3770797b0c9458abc1f1717d46a
@@ -287,9 +287,9 @@ EXAMPLES
 
 ```
 
-## `eth transactions ADDRESS --network=<NETWORK>`
+## `eth transactions <ADDRESS> --network=<NETWORK>`
 
-gets all transaction logs of a wallet address
+Gets all transaction logs of a wallet address.
 
 ```
 USAGE
@@ -301,7 +301,7 @@ ARGUMENTS
   NETWORK - network name
   
 DESCRIPTION
-  gets all transaction logs of a wallet address
+  Gets all transaction logs of a wallet address.
 
 EXAMPLES
   $ eth transaction michael001.eth
@@ -312,7 +312,7 @@ EXAMPLES
 
 ## `eth transfer <ADDRESS> <AMOUNT> --privatekey=<PRIVATEKEY> --network=<NETWORK>`
 
-transfers an amount of eth to a wallet address
+Transfers an amount of eth to a wallet address.
 
 ```
 USAGE
@@ -326,7 +326,7 @@ ARGUMENTS
   NETWORK - network name
   
 DESCRIPTION
-  resolves an ens name and gives the address
+  Transfers an amount of eth to a wallet address.
 
 EXAMPLES
   $ eth transfer michael001.eth 1 --privatekey=0xc4fd8a76acef6abf75f3272fc3a08a480504d3770797b0c9458abc0000000000
@@ -334,9 +334,9 @@ EXAMPLES
 ```
 
 
-## `eth updateabi NAME PATH`
+## `eth updateabi <NAME> <PATH>`
 
-update an abi already in storage
+Update an ABI already in storage.
 
 ```
 USAGE
@@ -347,7 +347,7 @@ ARGUMENTS
   PATH - location of the abi file
 
 DESCRIPTION
-  update an abi already in storage
+  Update an ABI already in storage.
 
 EXAMPLES
   $ eth update erc20abi ./abis/erc20abi.json
@@ -355,7 +355,7 @@ EXAMPLES
 
 ## `eth watchtransactions <ADDRESS>`
 
-watch all pending transactions on eth mainnet or transactions specific to an address
+Watch all pending transactions on eth mainnet or transactions specific to an address.
 
 ```
 USAGE
@@ -366,7 +366,7 @@ ARGUMENTS
   ADDRESS - wallet address 
 
 DESCRIPTION
-  watch all pending transactions on eth mainnet or transactions specific to an address
+  Watch all pending transactions on eth mainnet or transactions specific to an address.
 
 EXAMPLES
   $ eth watchtransactions

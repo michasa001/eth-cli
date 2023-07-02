@@ -1,8 +1,9 @@
 import chalk from "chalk";
 import { ethers } from "ethers";
 import config from "../cli-config.js";
-
 import yargs from "yargs";
+
+//**Description: Transfers an amount of eth to a wallet address. */
 
 const { argv } = yargs(process.argv)
 let address = process.argv[3];

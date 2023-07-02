@@ -6,6 +6,8 @@ import yargs from "yargs";
 import * as repl from "repl";
 
 
+//**Description: Generates a contract instance and opens an environment to interact with the contract. */
+
 const { argv } = yargs(process.argv)
 const store = new Conf({ projectName: 'eth-cli' });
 let address = process.argv[3];

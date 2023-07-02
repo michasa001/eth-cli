@@ -2,6 +2,9 @@ import Conf from "conf";
 import chalk from "chalk";
 import * as fs from "fs";
 
+//**Description:  Adds an ABI JSON file to storage. */
+
+
 const store = new Conf({ projectName: 'eth-cli' });
 
 const name = process.argv[3];

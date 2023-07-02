@@ -3,8 +3,9 @@ import { ethers } from "ethers";
 import config from "../../cli-config.js";
 import * as fs from "fs";
 import axios from "axios";
-
 import yargs from "yargs";
+
+//**Description: Gets all transaction logs of a wallet address. */
 
 const { argv } = yargs(process.argv)
 let address = process.argv[3];

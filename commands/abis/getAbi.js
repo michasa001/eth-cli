@@ -1,11 +1,10 @@
 import Conf from "conf";
 import chalk from "chalk";
-import * as fs from "fs";
+
+//**Description: Gets an ABI from storage. */
 
 const store = new Conf({ projectName: 'eth-cli' });
-
 const name = process.argv[3];
-
 
 const getAbi = async () => {
 

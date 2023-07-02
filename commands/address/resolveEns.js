@@ -1,8 +1,9 @@
 import chalk from "chalk";
 import { ethers } from "ethers";
 import config from "../../cli-config.js";
-
 import yargs from "yargs";
+
+//**Description: Resolves an ENS name and gives the address. */
 
 const { argv } = yargs(process.argv)
 let ens = process.argv[3];

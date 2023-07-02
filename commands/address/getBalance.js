@@ -1,8 +1,10 @@
 import chalk from "chalk";
 import { ethers } from "ethers";
 import config from "../../cli-config.js";
-
 import yargs from "yargs";
+
+
+//**Description: Gets the eth balance of an address */
 
 const { argv } = yargs(process.argv)
 let address = process.argv[3];

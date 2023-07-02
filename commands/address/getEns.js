@@ -1,8 +1,9 @@
 import chalk from "chalk";
 import { ethers } from "ethers";
 import config from "../../cli-config.js";
-
 import yargs from "yargs";
+
+//** Description: Gets the ens name of a wallet address. */
 
 const { argv } = yargs(process.argv)
 const address = process.argv[3];

@@ -18,7 +18,7 @@ import contract from "../commands/contract.js";
 
 const command = process.argv[2];
 
-if (command == "-help") {
+if (command == "-help" || "--help" || "help") {
   printHelp();
 } else {
   executeCommand(command);
@@ -26,81 +26,82 @@ if (command == "-help") {
 
 function printHelp() {
   console.log("Available commands:");
-  console.log("- balance");
-  console.log("- ens");
-  console.log("- resolvename");
-  console.log("- transfer");
-  console.log("- transaction");
-  console.log("- transactions");
+  console.log("- eth balance <ADDRESS || ENS>");
+  console.log("- ens <ADDRESS>");
+  console.log("- resolvename <ENS>");
+  console.log("- transfer <ADDRESS> <AMOUNT> --privatekey=<PRIVATEKEY> --network=<NETWORK>");
+  console.log("- transaction <HASH>");
+  console.log("- transactions <ADDRESS>");
   console.log("- generate");
-  console.log("- events");
+  console.log("- events <ADDRESS>");
   console.log("- watchtransactions");
-  console.log("- addabi");
-  console.log("- removeabi");
-  console.log("- getabi");
-  console.log("- updateabi");
+  console.log("- addabi <NAME>");
+  console.log("- removeabi <NAME>");
+  console.log("- getabi <NAME>");
+  console.log("- updateabi <NAME>");
   console.log("- abis");
-  console.log("- contract");
+  console.log("- contract <ADDRESS> --abi=<abiName> --privatekey=<PRIVATEKEY> --network=<NETWORK>");
   process.exit(0);
 
 }
 
-async function executeCommand(command) {try {
-  switch (command) {
-    case "balance":
-      await getBalance();
-      break;
-    case "ens":
-      await getEns();
-      break;
-    case "resolvename":
-      await resolveEns();
-      break;
-    case "transfer":
-      await transfer();
-      break;
-    case "transaction":
-      await getTransaction();
-      break;
-    case "transactions":
-      await getTransactions();
-      break;
-    case "generate":
-      await generateAccount();
-      break;
-    case "events":
-      await getEvents();
-      break;
-    case "watchtransactions":
-      await watchPendingTransactions();
-      break;
-    case "addabi":
-      await addAbi();
-      break;
-    case "removeabi":
-      await removeAbi();
-      break;
-    case "getabi":
-      await getAbi();
-      break;
-    case "updateabi":
-      await updateAbi();
-      break;
-    case "abis":
-      await abis();
-      break;
-    case "contract":
-      await contract();
-      break;
-    default:
-      console.error(`Unknown command: ${command}`);
-      process.exit(1);
+async function executeCommand(command) {
+  try {
+    switch (command) {
+      case "balance":
+        await getBalance();
+        break;
+      case "ens":
+        await getEns();
+        break;
+      case "resolvename":
+        await resolveEns();
+        break;
+      case "transfer":
+        await transfer();
+        break;
+      case "transaction":
+        await getTransaction();
+        break;
+      case "transactions":
+        await getTransactions();
+        break;
+      case "generate":
+        await generateAccount();
+        break;
+      case "events":
+        await getEvents();
+        break;
+      case "watchtransactions":
+        await watchPendingTransactions();
+        break;
+      case "addabi":
+        await addAbi();
+        break;
+      case "removeabi":
+        await removeAbi();
+        break;
+      case "getabi":
+        await getAbi();
+        break;
+      case "updateabi":
+        await updateAbi();
+        break;
+      case "abis":
+        await abis();
+        break;
+      case "contract":
+        await contract();
+        break;
+      default:
+        console.error(`Unknown command: ${command}`);
+        process.exit(1);
+    }
+  } catch (error) {
+    console.error(error);
+    process.exit(1);
   }
-} catch (error) {
-  console.error(error);
-  process.exit(1);
-}
 
-process.exit(0);
+  process.exit(0);
 }
 

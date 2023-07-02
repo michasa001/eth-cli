@@ -1,9 +1,9 @@
 import chalk from "chalk";
 import { ethers } from "ethers";
-import config from "../cli-config.js";
 import * as fs from "fs";
 
-import yargs from "yargs";
+
+//**Description: Generates a random wallet address with its privatekey and mnemonic phrase. */
 
 let write = process.argv[3];
 

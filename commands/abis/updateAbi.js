@@ -2,8 +2,9 @@ import Conf from "conf";
 import chalk from "chalk";
 import * as fs from "fs";
 
-const store = new Conf({ projectName: 'eth-cli' });
+//**Description:   Update an ABI already in storage. */
 
+const store = new Conf({ projectName: 'eth-cli' });
 const name = process.argv[3];
 const abiPath = process.argv[4];
 
