@@ -18,7 +18,7 @@ import contract from "../commands/contract.js";
 
 const command = process.argv[2];
 
-if (command === "help") {
+if (command == "-help") {
   printHelp();
 } else {
   executeCommand(command);
@@ -41,59 +41,66 @@ function printHelp() {
   console.log("- updateabi");
   console.log("- abis");
   console.log("- contract");
+  process.exit(0);
+
 }
 
-function executeCommand(command) {
+async function executeCommand(command) {try {
   switch (command) {
     case "balance":
-      getBalance();
+      await getBalance();
       break;
     case "ens":
-      getEns();
+      await getEns();
       break;
     case "resolvename":
-      resolveEns();
+      await resolveEns();
       break;
     case "transfer":
-      transfer();
+      await transfer();
       break;
     case "gettransaction":
-      getTransaction();
+      await getTransaction();
       break;
     case "gettransactions":
-      getTransactions();
+      await getTransactions();
       break;
     case "generate":
-      generateAccount();
+      await generateAccount();
       break;
     case "events":
-      getEvents();
+      await getEvents();
       break;
     case "watchtransactions":
-      watchPendingTransactions();
+      await watchPendingTransactions();
       break;
     case "addabi":
-      addAbi();
+      await addAbi();
       break;
     case "removeabi":
-      removeAbi();
+      await removeAbi();
       break;
     case "getabi":
-      getAbi();
+      await getAbi();
       break;
     case "updateabi":
-      updateAbi();
+      await updateAbi();
       break;
     case "abis":
-      abis();
+      await abis();
       break;
     case "contract":
-      contract();
+      await contract();
       break;
     default:
       console.error(`Unknown command: ${command}`);
       process.exit(1);
   }
-
-  process.exit(0);
+} catch (error) {
+  console.error(error);
+  process.exit(1);
 }
+
+process.exit(0);
+}
+
