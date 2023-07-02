@@ -19,6 +19,7 @@ const providerApiKey = config.providerApiKey
 
 const contract = async () => {
   const provider = new ethers.AlchemyProvider(network, providerApiKey)
+  const mainnetProvider = new ethers.AlchemyProvider("mainnet", providerApiKey)
 
   if (!privateKey) {
     console.error("Enter private key with command")
@@ -26,7 +27,7 @@ const contract = async () => {
   }
 
   if (address.includes(".eth")) {
-    address = await provider.resolveName(address)
+    address = await mainnetProvider.resolveName(address)
   }
 
   if (!config.networks.includes(network)) {

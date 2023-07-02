@@ -15,9 +15,10 @@ const privateKey = argv.privatekey
 
 const transfer = async () => {
   const provider = new ethers.AlchemyProvider(network, providerApiKey)
+  const mainnetProvider = new ethers.AlchemyProvider("mainnet", providerApiKey)
 
   if (address.includes(".eth")) {
-    address = await provider.resolveName(address)
+    address = await mainnetProvider.resolveName(address)
   }
 
   if (!config.networks.includes(network)) {

@@ -7,8 +7,7 @@ import yargs from "yargs";
 
 const { argv } = yargs(process.argv)
 let ens = process.argv[3];
-let network = argv.network
-if (!network) { network = "mainnet" }
+let network = "mainnet"
 const providerApiKey = config.providerApiKey
 
 const resolveEns = async () => {
