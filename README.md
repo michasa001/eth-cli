@@ -44,7 +44,7 @@ To get started with ether-cli, follow these steps:
 eth COMMAND
 ```
 
-3. Use the eth --help command to view the available commands and their usage:
+3. Use the `eth -help` command to view the available commands and their usage:
 
 ```
  eth -help 
