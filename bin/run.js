@@ -105,5 +105,5 @@ async function executeCommand(command) {
     process.exit(1);
   }
 
-  process.exit(0);
+  if (command != "watchtransactions") process.exit(0);
 }

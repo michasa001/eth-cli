@@ -28,7 +28,7 @@
 
 # Description
 
-ether-cli is a tool for querying the blockchain data and sending transcations right from your command line
+ether-cli is a tool for querying blockchain data and sending transactions right from your command line
 
 # Get Started
 
